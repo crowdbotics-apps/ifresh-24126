@@ -1,5 +1,9 @@
 import axios from "axios"
 import {} from "react-native-dotenv"
+const test = axios.create({
+  baseURL: "https://www.google.com",
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
+})
 const woocommerceproducts = axios.create({
   baseURL: "https://ifresh.modernyeshop.eu",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
