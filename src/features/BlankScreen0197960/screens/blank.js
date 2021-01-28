@@ -28,7 +28,11 @@ class Blank extends React.Component {
     return { headerLeft: <SlideMenuIcon navigationProps={navigation} /> }
   }
 
-  render = () => <View style={styles.View_1} />
+  render = () => (
+    <View style={styles.View_1}>
+      <Text>Sample text content</Text>
+    </View>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -37,10 +41,15 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     alignContent: "center"
-  }
+  },
+  Text_3: {}
 })
+
 const mapStateToProps = state => {
-  return {}
+  return {
+    woocommerceproducts_response_get_productsText3:
+      state.apiReducer.woocommerceproducts_response_get_products
+  }
 }
 
 const mapDispatchToProps = () => {
